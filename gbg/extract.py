@@ -65,7 +65,10 @@ def _glossary_text() -> str:
 
 
 def _cache_key(r: RawReview) -> str:
-    return hashlib.sha256(f"{MODEL}|{r.text_ko}".encode()).hexdigest()[:16]
+    # Key on everything that changes the output: model, prompt, glossary, schema.
+    # (Bug fixed in-window: keying on model+text alone served stale extractions after a schema change.)
+    version = SYSTEM + _glossary_text() + json.dumps(Extraction.model_json_schema(), sort_keys=True)
+    return hashlib.sha256(f"{MODEL}|{version}|{r.text_ko}".encode()).hexdigest()[:16]
 
 
 def extract_llm(r: RawReview) -> Extraction:

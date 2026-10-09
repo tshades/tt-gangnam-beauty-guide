@@ -35,7 +35,8 @@ class Extraction(BaseModel):
     self_paid_markers: list[str] = Field([], description="Verbatim phrases like 내돈내산")
     days_post_op: Optional[int] = None
     sentiment: Literal["positive", "mixed", "negative"]
-    complications: list[str] = Field([], description="English, only those explicitly mentioned")
+    complications: list[str] = Field([], description="English. Only ABNORMAL outcomes explicitly mentioned (asymmetry, infection, numbness persisting, revision needed). NOT normal recovery.")
+    expected_recovery: list[str] = Field([], description="English. Normal post-op course mentioned: swelling, bruising, mild pain, stitches removed.")
     confidence: float = Field(ge=0, le=1)
 
 
