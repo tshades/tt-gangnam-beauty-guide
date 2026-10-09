@@ -1,0 +1,1141 @@
+{
+  "procedures": [
+    {
+      "ko": [
+        "쌍꺼풀수술",
+        "쌍꺼풀 수술",
+        "쌍커풀수술",
+        "쌍수",
+        "쌍꺼풀"
+      ],
+      "procedure_id": "double_eyelid_surgery",
+      "en": "Double eyelid surgery (blepharoplasty, method unspecified)",
+      "category": "eye"
+    },
+    {
+      "ko": [
+        "매몰법",
+        "매몰",
+        "매몰쌍수",
+        "자연유착",
+        "자연유착쌍수",
+        "비절개쌍수"
+      ],
+      "procedure_id": "double_eyelid_buried_suture",
+      "en": "Double eyelid surgery - non-incisional (buried suture)",
+      "category": "eye"
+    },
+    {
+      "ko": [
+        "절개법",
+        "절개",
+        "절개쌍수",
+        "통절개",
+        "완전절개"
+      ],
+      "procedure_id": "double_eyelid_incisional",
+      "en": "Double eyelid surgery - full incision",
+      "category": "eye"
+    },
+    {
+      "ko": [
+        "부분절개",
+        "부분절개쌍수",
+        "미니절개"
+      ],
+      "procedure_id": "double_eyelid_partial_incision",
+      "en": "Double eyelid surgery - partial incision",
+      "category": "eye"
+    },
+    {
+      "ko": [
+        "눈매교정",
+        "눈매교정술",
+        "안검하수",
+        "안검하수교정",
+        "비절개눈매교정",
+        "절개눈매교정"
+      ],
+      "procedure_id": "ptosis_correction",
+      "en": "Ptosis correction (eye-opening / levator correction)",
+      "category": "eye"
+    },
+    {
+      "ko": [
+        "앞트임",
+        "앞트임수술",
+        "몽고주름",
+        "몽고주름교정"
+      ],
+      "procedure_id": "epicanthoplasty",
+      "en": "Epicanthoplasty (medial canthoplasty)",
+      "category": "eye"
+    },
+    {
+      "ko": [
+        "뒤트임",
+        "뒤트임수술"
+      ],
+      "procedure_id": "lateral_canthoplasty",
+      "en": "Lateral canthoplasty",
+      "category": "eye"
+    },
+    {
+      "ko": [
+        "밑트임",
+        "밑트임수술"
+      ],
+      "procedure_id": "lower_canthoplasty",
+      "en": "Lower canthoplasty (lower eyelid lowering)",
+      "category": "eye"
+    },
+    {
+      "ko": [
+        "눈밑지방재배치",
+        "눈밑지방 재배치",
+        "눈밑재배치",
+        "재배치"
+      ],
+      "procedure_id": "lower_eyelid_fat_repositioning",
+      "en": "Lower eyelid fat repositioning",
+      "category": "eye"
+    },
+    {
+      "ko": [
+        "하안검",
+        "하안검수술",
+        "하안검성형"
+      ],
+      "procedure_id": "lower_blepharoplasty",
+      "en": "Lower blepharoplasty",
+      "category": "eye"
+    },
+    {
+      "ko": [
+        "상안검",
+        "상안검수술",
+        "상안검성형"
+      ],
+      "procedure_id": "upper_blepharoplasty",
+      "en": "Upper blepharoplasty (skin excision, usually older patients)",
+      "category": "eye"
+    },
+    {
+      "ko": [
+        "눈썹하거상",
+        "눈썹밑거상",
+        "눈썹하 거상"
+      ],
+      "procedure_id": "subbrow_lift",
+      "en": "Sub-brow lift",
+      "category": "eye"
+    },
+    {
+      "ko": [
+        "눈재수술",
+        "눈 재수술",
+        "쌍수재수술",
+        "쌍꺼풀재수술"
+      ],
+      "procedure_id": "eye_revision_surgery",
+      "en": "Revision eyelid surgery",
+      "category": "eye"
+    },
+    {
+      "ko": [
+        "코성형",
+        "코수술",
+        "코수",
+        "코성형수술"
+      ],
+      "procedure_id": "rhinoplasty",
+      "en": "Rhinoplasty (unspecified)",
+      "category": "nose"
+    },
+    {
+      "ko": [
+        "코재수술",
+        "코 재수술",
+        "코재"
+      ],
+      "procedure_id": "revision_rhinoplasty",
+      "en": "Revision rhinoplasty",
+      "category": "nose"
+    },
+    {
+      "ko": [
+        "코끝성형",
+        "코끝",
+        "코끝수술"
+      ],
+      "procedure_id": "tip_plasty",
+      "en": "Nasal tip plasty",
+      "category": "nose"
+    },
+    {
+      "ko": [
+        "콧볼축소",
+        "콧볼",
+        "비익축소"
+      ],
+      "procedure_id": "alar_reduction",
+      "en": "Alar base reduction",
+      "category": "nose"
+    },
+    {
+      "ko": [
+        "매부리코",
+        "매부리코교정",
+        "험프제거"
+      ],
+      "procedure_id": "dorsal_hump_reduction",
+      "en": "Dorsal hump reduction",
+      "category": "nose"
+    },
+    {
+      "ko": [
+        "휜코",
+        "휜코교정",
+        "비중격만곡",
+        "비중격교정"
+      ],
+      "procedure_id": "deviated_nose_correction",
+      "en": "Deviated nose / septum correction",
+      "category": "nose"
+    },
+    {
+      "ko": [
+        "실리콘",
+        "실리콘코",
+        "실리콘보형물",
+        "실리콘 보형물"
+      ],
+      "procedure_id": "rhinoplasty_silicone_implant",
+      "en": "Rhinoplasty with silicone implant",
+      "category": "nose"
+    },
+    {
+      "ko": [
+        "자가늑연골",
+        "늑연골",
+        "자가늑",
+        "기증늑연골",
+        "기증연골"
+      ],
+      "procedure_id": "rhinoplasty_rib_cartilage",
+      "en": "Rhinoplasty with rib cartilage (autologous or donor)",
+      "category": "nose"
+    },
+    {
+      "ko": [
+        "비중격연골",
+        "귀연골",
+        "자가연골"
+      ],
+      "procedure_id": "rhinoplasty_septal_ear_cartilage",
+      "en": "Rhinoplasty with septal/ear cartilage",
+      "category": "nose"
+    },
+    {
+      "ko": [
+        "윤곽3종",
+        "윤곽 3종",
+        "3종윤곽",
+        "안면윤곽3종"
+      ],
+      "procedure_id": "facial_contouring_3_combo",
+      "en": "Facial contouring 3-in-1 (zygoma + mandible angle + chin)",
+      "category": "face_contour"
+    },
+    {
+      "ko": [
+        "윤곽2종",
+        "윤곽 2종"
+      ],
+      "procedure_id": "facial_contouring_2_combo",
+      "en": "Facial contouring 2-in-1 (usually zygoma + mandible)",
+      "category": "face_contour"
+    },
+    {
+      "ko": [
+        "안면윤곽",
+        "윤곽수술",
+        "윤곽"
+      ],
+      "procedure_id": "facial_contouring",
+      "en": "Facial bone contouring (unspecified)",
+      "category": "face_contour"
+    },
+    {
+      "ko": [
+        "광대축소",
+        "광대축소술",
+        "광대수술",
+        "광대"
+      ],
+      "procedure_id": "zygoma_reduction",
+      "en": "Zygoma (cheekbone) reduction",
+      "category": "face_contour"
+    },
+    {
+      "ko": [
+        "사각턱",
+        "사각턱수술",
+        "사각턱축소",
+        "하악각축소",
+        "브이라인수술",
+        "V라인"
+      ],
+      "procedure_id": "mandibular_angle_reduction",
+      "en": "Mandibular angle (square jaw) reduction",
+      "category": "face_contour"
+    },
+    {
+      "ko": [
+        "턱끝",
+        "턱끝수술",
+        "턱끝성형",
+        "앞턱",
+        "앞턱성형",
+        "무턱",
+        "무턱교정",
+        "턱끝보형물"
+      ],
+      "procedure_id": "genioplasty",
+      "en": "Genioplasty / chin surgery",
+      "category": "face_contour"
+    },
+    {
+      "ko": [
+        "양악",
+        "양악수술",
+        "양악성형"
+      ],
+      "procedure_id": "orthognathic_double_jaw_surgery",
+      "en": "Double-jaw (bimaxillary orthognathic) surgery",
+      "category": "face_contour"
+    },
+    {
+      "ko": [
+        "귀족수술",
+        "팔자보형물"
+      ],
+      "procedure_id": "paranasal_augmentation",
+      "en": "Paranasal augmentation ('aristocrat surgery', nasolabial fold implant)",
+      "category": "face_contour"
+    },
+    {
+      "ko": [
+        "지방이식",
+        "얼굴지방이식",
+        "자가지방이식",
+        "이마지방이식",
+        "눈밑지방이식"
+      ],
+      "procedure_id": "fat_grafting_face",
+      "en": "Facial fat grafting (autologous fat transfer)",
+      "category": "face_contour"
+    },
+    {
+      "ko": [
+        "인중축소",
+        "인중축소술"
+      ],
+      "procedure_id": "philtrum_shortening",
+      "en": "Philtrum shortening (upper lip lift)",
+      "category": "other"
+    },
+    {
+      "ko": [
+        "입꼬리",
+        "입꼬리성형",
+        "입꼬리올리기"
+      ],
+      "procedure_id": "mouth_corner_lift",
+      "en": "Mouth-corner lift",
+      "category": "other"
+    },
+    {
+      "ko": [
+        "가슴수술",
+        "가슴성형",
+        "가슴확대",
+        "가슴확대술",
+        "가확",
+        "가슴보형물",
+        "가슴 수술"
+      ],
+      "procedure_id": "breast_augmentation",
+      "en": "Breast augmentation (implant)",
+      "category": "breast"
+    },
+    {
+      "ko": [
+        "가슴지방이식",
+        "가슴 지방이식"
+      ],
+      "procedure_id": "breast_fat_grafting",
+      "en": "Breast augmentation by fat grafting",
+      "category": "breast"
+    },
+    {
+      "ko": [
+        "가슴축소",
+        "가슴축소술",
+        "유방축소"
+      ],
+      "procedure_id": "breast_reduction",
+      "en": "Breast reduction",
+      "category": "breast"
+    },
+    {
+      "ko": [
+        "가슴거상",
+        "가슴거상술",
+        "처진가슴"
+      ],
+      "procedure_id": "mastopexy",
+      "en": "Breast lift (mastopexy)",
+      "category": "breast"
+    },
+    {
+      "ko": [
+        "가슴재수술",
+        "보형물제거",
+        "보형물교체"
+      ],
+      "procedure_id": "breast_revision",
+      "en": "Breast revision / implant removal or exchange",
+      "category": "breast"
+    },
+    {
+      "ko": [
+        "함몰유두",
+        "유두축소",
+        "유륜축소"
+      ],
+      "procedure_id": "nipple_areola_surgery",
+      "en": "Nipple/areola surgery",
+      "category": "breast"
+    },
+    {
+      "ko": [
+        "지방흡입",
+        "지흡",
+        "지방흡입술"
+      ],
+      "procedure_id": "liposuction",
+      "en": "Liposuction",
+      "category": "body"
+    },
+    {
+      "ko": [
+        "얼굴지방흡입",
+        "얼지흡",
+        "이중턱지흡",
+        "이중턱지방흡입",
+        "턱밑지흡"
+      ],
+      "procedure_id": "face_liposuction",
+      "en": "Facial / submental liposuction",
+      "category": "body"
+    },
+    {
+      "ko": [
+        "복부성형",
+        "복부거상",
+        "타미턱"
+      ],
+      "procedure_id": "abdominoplasty",
+      "en": "Abdominoplasty (tummy tuck)",
+      "category": "body"
+    },
+    {
+      "ko": [
+        "피코토닝",
+        "피코",
+        "피코레이저",
+        "피코슈어"
+      ],
+      "procedure_id": "pico_toning",
+      "en": "Picosecond laser toning",
+      "category": "skin_laser"
+    },
+    {
+      "ko": [
+        "레이저토닝",
+        "토닝",
+        "레블라이트토닝"
+      ],
+      "procedure_id": "laser_toning",
+      "en": "Laser toning (Q-switched Nd:YAG)",
+      "category": "skin_laser"
+    },
+    {
+      "ko": [
+        "프락셀",
+        "피코프락셀",
+        "프랙셔널"
+      ],
+      "procedure_id": "fractional_laser",
+      "en": "Fractional laser resurfacing",
+      "category": "skin_laser"
+    },
+    {
+      "ko": [
+        "점빼기",
+        "점제거",
+        "CO2레이저",
+        "co2"
+      ],
+      "procedure_id": "mole_removal_co2",
+      "en": "Mole/lesion removal (CO2 laser)",
+      "category": "skin_laser"
+    },
+    {
+      "ko": [
+        "IPL",
+        "아이피엘"
+      ],
+      "procedure_id": "ipl",
+      "en": "Intense pulsed light (IPL)",
+      "category": "skin_laser"
+    },
+    {
+      "ko": [
+        "엑셀V",
+        "엑셀브이",
+        "브이빔"
+      ],
+      "procedure_id": "vascular_laser",
+      "en": "Vascular laser (Excel V / V-beam) for redness",
+      "category": "skin_laser"
+    },
+    {
+      "ko": [
+        "레이저제모",
+        "제모",
+        "겨드랑이제모"
+      ],
+      "procedure_id": "laser_hair_removal",
+      "en": "Laser hair removal",
+      "category": "skin_laser"
+    },
+    {
+      "ko": [
+        "포텐자",
+        "시크릿",
+        "인피니"
+      ],
+      "procedure_id": "rf_microneedling",
+      "en": "RF microneedling (Potenza/Secret/Infini)",
+      "category": "skin_laser"
+    },
+    {
+      "ko": [
+        "아쿠아필",
+        "필링",
+        "박피"
+      ],
+      "procedure_id": "chemical_peel",
+      "en": "Peel / hydrafacial-type treatment",
+      "category": "skin_laser"
+    },
+    {
+      "ko": [
+        "울쎄라",
+        "울세라",
+        "울쎄라리프팅"
+      ],
+      "procedure_id": "ulthera",
+      "en": "Ultherapy (micro-focused ultrasound / HIFU)",
+      "category": "lifting"
+    },
+    {
+      "ko": [
+        "써마지",
+        "서마지",
+        "써마지FLX",
+        "써마지flx"
+      ],
+      "procedure_id": "thermage",
+      "en": "Thermage (monopolar RF)",
+      "category": "lifting"
+    },
+    {
+      "ko": [
+        "슈링크",
+        "슈링크유니버스",
+        "슈링크 유니버스"
+      ],
+      "procedure_id": "shurink",
+      "en": "Shurink (HIFU, Classys)",
+      "category": "lifting"
+    },
+    {
+      "ko": [
+        "하이푸",
+        "HIFU",
+        "리니어지",
+        "더블로"
+      ],
+      "procedure_id": "hifu_other",
+      "en": "HIFU (other brands)",
+      "category": "lifting"
+    },
+    {
+      "ko": [
+        "인모드",
+        "인모드FX",
+        "인모드리프팅"
+      ],
+      "procedure_id": "inmode",
+      "en": "InMode (RF/FX)",
+      "category": "lifting"
+    },
+    {
+      "ko": [
+        "올리지오",
+        "온다",
+        "온다리프팅",
+        "티타늄",
+        "티타늄리프팅"
+      ],
+      "procedure_id": "rf_lifting_other",
+      "en": "Other RF/microwave lifting (Oligio/Onda/Titanium)",
+      "category": "lifting"
+    },
+    {
+      "ko": [
+        "실리프팅",
+        "실리프트",
+        "민트실",
+        "코그실",
+        "녹는실"
+      ],
+      "procedure_id": "thread_lift",
+      "en": "Thread lift (PDO/PCL, e.g. Mint thread)",
+      "category": "lifting"
+    },
+    {
+      "ko": [
+        "안면거상",
+        "안면거상술",
+        "거상술",
+        "거상",
+        "미니거상",
+        "SMAS거상"
+      ],
+      "procedure_id": "facelift",
+      "en": "Facelift (rhytidectomy)",
+      "category": "lifting"
+    },
+    {
+      "ko": [
+        "이마거상",
+        "내시경이마거상",
+        "이마리프팅"
+      ],
+      "procedure_id": "forehead_lift",
+      "en": "Forehead / brow lift",
+      "category": "lifting"
+    },
+    {
+      "ko": [
+        "목거상",
+        "목리프팅"
+      ],
+      "procedure_id": "neck_lift",
+      "en": "Neck lift",
+      "category": "lifting"
+    },
+    {
+      "ko": [
+        "리프팅"
+      ],
+      "procedure_id": "lifting_unspecified",
+      "en": "Lifting (device or surgical, unspecified)",
+      "category": "lifting"
+    },
+    {
+      "ko": [
+        "보톡스",
+        "보톡",
+        "보툴리눔",
+        "나보타",
+        "제오민",
+        "코어톡스",
+        "보툴렉스",
+        "디스포트"
+      ],
+      "procedure_id": "botox",
+      "en": "Botulinum toxin injection",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "사각턱보톡스",
+        "턱보톡스",
+        "사각턱 보톡스"
+      ],
+      "procedure_id": "masseter_botox",
+      "en": "Masseter (jaw-slimming) Botox",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "스킨보톡스",
+        "더모톡신",
+        "주름보톡스",
+        "미간보톡스",
+        "이마보톡스"
+      ],
+      "procedure_id": "skin_wrinkle_botox",
+      "en": "Skin / wrinkle Botox (incl. microbotox)",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "승모근보톡스",
+        "종아리보톡스",
+        "바디보톡스"
+      ],
+      "procedure_id": "body_botox",
+      "en": "Body Botox (trapezius / calf)",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "필러",
+        "히알루론산필러",
+        "쥬비덤",
+        "레스틸렌",
+        "벨로테로"
+      ],
+      "procedure_id": "filler",
+      "en": "Dermal filler (HA)",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "코필러"
+      ],
+      "procedure_id": "nose_filler",
+      "en": "Non-surgical nose filler",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "눈밑필러",
+        "애교필러",
+        "애교살필러"
+      ],
+      "procedure_id": "under_eye_filler",
+      "en": "Under-eye / aegyo-sal filler",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "입술필러",
+        "팔자필러",
+        "팔자주름필러"
+      ],
+      "procedure_id": "lip_or_nasolabial_filler",
+      "en": "Lip / nasolabial fold filler",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "리쥬란",
+        "리쥬란힐러",
+        "리쥬란HB",
+        "아이리쥬란",
+        "연어주사",
+        "PN주사",
+        "PDRN"
+      ],
+      "procedure_id": "rejuran",
+      "en": "Rejuran / PN-PDRN skin booster ('salmon injection')",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "물광주사",
+        "물광"
+      ],
+      "procedure_id": "hydrating_skin_booster",
+      "en": "Hydrating HA skin booster ('water-glow injection')",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "쥬베룩",
+        "쥬베룩볼륨"
+      ],
+      "procedure_id": "juvelook",
+      "en": "Juvelook (PDLLA collagen stimulator)",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "스컬트라",
+        "엘란쎄",
+        "올리디아"
+      ],
+      "procedure_id": "collagen_stimulator",
+      "en": "Collagen stimulator (Sculptra / Ellansé)",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "샤넬주사",
+        "샤넬필로가"
+      ],
+      "procedure_id": "nctf_skin_booster",
+      "en": "'Chanel injection' (Filorga NCTF polyrevitalising booster)",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "엑소좀",
+        "엑소좀주사"
+      ],
+      "procedure_id": "exosome",
+      "en": "Exosome skin treatment",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "윤곽주사",
+        "지방분해주사",
+        "브이올렛",
+        "카벨라",
+        "얼굴지방분해"
+      ],
+      "procedure_id": "fat_dissolving_injection",
+      "en": "Fat-dissolving injection (contour injection)",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "백옥주사",
+        "신데렐라주사",
+        "비타민주사"
+      ],
+      "procedure_id": "iv_drip",
+      "en": "IV / vitamin drip (glutathione etc.)",
+      "category": "injectable"
+    },
+    {
+      "ko": [
+        "모발이식",
+        "헤어라인교정",
+        "헤어라인"
+      ],
+      "procedure_id": "hair_transplant",
+      "en": "Hair transplant / hairline correction",
+      "category": "other"
+    },
+    {
+      "ko": [
+        "보조개",
+        "보조개성형"
+      ],
+      "procedure_id": "dimple_creation",
+      "en": "Dimpleplasty",
+      "category": "other"
+    },
+    {
+      "ko": [
+        "흉터",
+        "흉터제거",
+        "흉터성형"
+      ],
+      "procedure_id": "scar_revision",
+      "en": "Scar revision",
+      "category": "other"
+    }
+  ],
+  "review_terms": [
+    {
+      "ko": "후기",
+      "en": "review / post-op write-up",
+      "signal": null
+    },
+    {
+      "ko": "내돈내산",
+      "en": "paid with my own money (not sponsored)",
+      "signal": "trust_positive"
+    },
+    {
+      "ko": "내돈내수",
+      "en": "paid for my own surgery (내돈내산 variant)",
+      "signal": "trust_positive"
+    },
+    {
+      "ko": "협찬",
+      "en": "sponsored (free/discounted in exchange for review)",
+      "signal": "sponsored"
+    },
+    {
+      "ko": "체험단",
+      "en": "reviewer program / influencer trial group",
+      "signal": "sponsored"
+    },
+    {
+      "ko": "원고료",
+      "en": "paid writing fee",
+      "signal": "sponsored"
+    },
+    {
+      "ko": "제공받아",
+      "en": "received (free) from the clinic",
+      "signal": "sponsored"
+    },
+    {
+      "ko": "광고",
+      "en": "advertisement",
+      "signal": "sponsored"
+    },
+    {
+      "ko": "모델",
+      "en": "clinic model (discounted patient for photos)",
+      "signal": "sponsored"
+    },
+    {
+      "ko": "붓기",
+      "en": "swelling (colloquial spelling)",
+      "signal": "recovery"
+    },
+    {
+      "ko": "부기",
+      "en": "swelling",
+      "signal": "recovery"
+    },
+    {
+      "ko": "부기빠짐",
+      "en": "swelling going down",
+      "signal": "recovery"
+    },
+    {
+      "ko": "멍",
+      "en": "bruising",
+      "signal": "recovery"
+    },
+    {
+      "ko": "실밥",
+      "en": "stitches / sutures",
+      "signal": "recovery"
+    },
+    {
+      "ko": "실밥제거",
+      "en": "stitch removal",
+      "signal": "recovery"
+    },
+    {
+      "ko": "D+30",
+      "en": "30 days post-op",
+      "signal": "recovery"
+    },
+    {
+      "ko": "다운타임",
+      "en": "downtime",
+      "signal": "recovery"
+    },
+    {
+      "ko": "회복기간",
+      "en": "recovery period",
+      "signal": "recovery"
+    },
+    {
+      "ko": "일상복귀",
+      "en": "return to daily life",
+      "signal": "recovery"
+    },
+    {
+      "ko": "압박복",
+      "en": "compression garment",
+      "signal": "recovery"
+    },
+    {
+      "ko": "재수술",
+      "en": "revision surgery",
+      "signal": "trust_negative"
+    },
+    {
+      "ko": "부작용",
+      "en": "side effects / complications",
+      "signal": "trust_negative"
+    },
+    {
+      "ko": "비대칭",
+      "en": "asymmetry",
+      "signal": "trust_negative"
+    },
+    {
+      "ko": "염증",
+      "en": "inflammation / infection",
+      "signal": "trust_negative"
+    },
+    {
+      "ko": "구축",
+      "en": "capsular contracture",
+      "signal": "trust_negative"
+    },
+    {
+      "ko": "풀림",
+      "en": "(double-eyelid) line coming undone",
+      "signal": "trust_negative"
+    },
+    {
+      "ko": "감각저하",
+      "en": "numbness / reduced sensation",
+      "signal": "trust_negative"
+    },
+    {
+      "ko": "후회",
+      "en": "regret",
+      "signal": "trust_negative"
+    },
+    {
+      "ko": "비추",
+      "en": "not recommended",
+      "signal": "trust_negative"
+    },
+    {
+      "ko": "강추",
+      "en": "strongly recommend",
+      "signal": "trust_positive"
+    },
+    {
+      "ko": "만족",
+      "en": "satisfied",
+      "signal": "trust_positive"
+    },
+    {
+      "ko": "자연스러워요",
+      "en": "looks natural",
+      "signal": "trust_positive"
+    },
+    {
+      "ko": "공장형",
+      "en": "'factory-style' high-volume clinic",
+      "signal": "trust_negative"
+    },
+    {
+      "ko": "유령수술",
+      "en": "ghost surgery (surgeon substituted)",
+      "signal": "trust_negative"
+    },
+    {
+      "ko": "성괴",
+      "en": "'plastic monster' (overdone result)",
+      "signal": "trust_negative"
+    },
+    {
+      "ko": "원장님",
+      "en": "the doctor / surgeon (clinic director)",
+      "signal": null
+    },
+    {
+      "ko": "대표원장",
+      "en": "head / founding surgeon",
+      "signal": null
+    },
+    {
+      "ko": "실장님",
+      "en": "consultation coordinator (non-physician sales counselor)",
+      "signal": null
+    },
+    {
+      "ko": "상담",
+      "en": "consultation",
+      "signal": null
+    },
+    {
+      "ko": "견적",
+      "en": "price quote",
+      "signal": "price"
+    },
+    {
+      "ko": "만원",
+      "en": "10,000 KRW unit",
+      "signal": "price"
+    },
+    {
+      "ko": "부가세",
+      "en": "VAT (10%)",
+      "signal": "price"
+    },
+    {
+      "ko": "VAT별도",
+      "en": "VAT excluded",
+      "signal": "price"
+    },
+    {
+      "ko": "이벤트가",
+      "en": "promotional / event price",
+      "signal": "price"
+    },
+    {
+      "ko": "샷",
+      "en": "shots (unit for Ulthera/Thermage/Shurink)",
+      "signal": "price"
+    },
+    {
+      "ko": "cc",
+      "en": "cc (implant volume, or filler/booster volume)",
+      "signal": "price"
+    },
+    {
+      "ko": "현금가",
+      "en": "cash price (discounted vs card)",
+      "signal": "price"
+    },
+    {
+      "ko": "서비스",
+      "en": "free add-on",
+      "signal": "price"
+    },
+    {
+      "ko": "수면마취",
+      "en": "IV sedation",
+      "signal": null
+    },
+    {
+      "ko": "전신마취",
+      "en": "general anesthesia",
+      "signal": null
+    },
+    {
+      "ko": "전후사진",
+      "en": "before/after photos",
+      "signal": null
+    },
+    {
+      "ko": "사후관리",
+      "en": "aftercare",
+      "signal": null
+    },
+    {
+      "ko": "성형외과",
+      "en": "plastic surgery clinic",
+      "signal": null
+    },
+    {
+      "ko": "피부과",
+      "en": "dermatology clinic",
+      "signal": null
+    },
+    {
+      "ko": "의원",
+      "en": "clinic (legal suffix)",
+      "signal": null
+    },
+    {
+      "ko": "OO",
+      "en": "name redacted placeholder",
+      "signal": null
+    }
+  ]
+}

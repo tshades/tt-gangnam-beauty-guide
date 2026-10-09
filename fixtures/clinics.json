@@ -1,0 +1,89 @@
+[
+ {
+  "clinic_id": "c_haneul_ps",
+  "name_ko": "청담하늘성형외과",
+  "name_en": "Cheongdam Haneul Plastic Surgery",
+  "aliases": [
+   "하늘성형외과",
+   "하늘성형",
+   "Haneul PS",
+   "Hanul Plastic Surgery"
+  ],
+  "phone": "02-555-0101",
+  "district": "강남구",
+  "specialist_surgeons": [
+   "김도윤",
+   "이서준"
+  ],
+  "services": [
+   "double_eyelid_buried_suture",
+   "double_eyelid_incisional",
+   "rhinoplasty",
+   "breast_augmentation",
+   "facial_contouring_3_combo"
+  ],
+  "address": "서울 강남구 압구정로 101, 5층"
+ },
+ {
+  "clinic_id": "c_haneul_derm",
+  "name_ko": "하늘피부과의원",
+  "name_en": "Haneul Dermatology Clinic",
+  "aliases": [
+   "하늘피부과"
+  ],
+  "phone": "02-555-0199",
+  "district": "강남구",
+  "specialist_surgeons": [],
+  "services": [
+   "ulthera",
+   "thermage",
+   "botox",
+   "pico_toning",
+   "rejuran"
+  ],
+  "address": "서울 강남구 논현로 199, 2층"
+ },
+ {
+  "clinic_id": "c_orda_ps",
+  "name_ko": "오르다성형외과",
+  "name_en": "Orda Plastic Surgery",
+  "aliases": [
+   "오르다",
+   "Orda PS",
+   "Oreuda Plastic Surgery"
+  ],
+  "phone": "02-555-0202",
+  "district": "강남구",
+  "specialist_surgeons": [
+   "박지훈"
+  ],
+  "services": [
+   "epicanthoplasty",
+   "ptosis_correction",
+   "rhinoplasty",
+   "rhinoplasty_rib_cartilage"
+  ],
+  "address": "서울 강남구 강남대로 202, 7층"
+ },
+ {
+  "clinic_id": "c_mir_ps",
+  "name_ko": "미르성형외과",
+  "name_en": "Mir Plastic Surgery",
+  "aliases": [
+   "미르",
+   "Mir PS"
+  ],
+  "phone": "02-555-0303",
+  "district": "서초구",
+  "specialist_surgeons": [
+   "최민서"
+  ],
+  "services": [
+   "facial_contouring_3_combo",
+   "zygoma_reduction",
+   "mandibular_angle_reduction",
+   "genioplasty"
+  ],
+  "address": "서울 서초구 서초대로 303, 3층"
+ }
+]
