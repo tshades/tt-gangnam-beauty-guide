@@ -9,7 +9,7 @@ id   status       clinic          trust  procedures
 r01  published    c_haneul_ps     0.65   double_eyelid_buried_suture      ₩1,800,000 ("견적은 180")
 r02  duplicate    -                 -    same author cross-posted r01 to a café
 r03  published    c_mir_ps        0.00   facial_contouring_3_combo        체험단 template ×3 authors
-r04  published    c_mir_ps        0.00   facial_contouring_3_combo        (sponsored: excluded from ratings)
+r04  published    c_mir_ps        0.00   facial_contouring_3_combo        (sponsored markers → trust 0.00)
 r05  published    c_mir_ps        0.00   facial_contouring_3_combo
 r06  published    c_orda_ps       0.85   rhinoplasty_rib_cartilage        receipt + surgeon on roster
 r08  published    c_haneul_derm   0.50   ulthera                          resolved by the AGENT (below)
