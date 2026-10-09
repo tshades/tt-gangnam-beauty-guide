@@ -3,6 +3,6 @@
 .cache/
 __pycache__/
 *.pyc
-out*.json
+/out*.json
 _private/
 .DS_Store

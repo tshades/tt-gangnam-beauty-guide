@@ -1,0 +1,19 @@
+id   status       clinic          trust  procedures / issues
+r01  published    c_haneul_ps     0.65   double_eyelid_buried_suture
+                                      ₩ 1,800,000 (견적은 180 나왔고)
+r02  duplicate    -                 -    
+r03  published    c_mir_ps        0.00   facial_contouring_3_combo
+r04  published    c_mir_ps        0.00   facial_contouring_3_combo
+r05  published    c_mir_ps        0.00   facial_contouring_3_combo
+r06  published    c_orda_ps       0.85   rhinoplasty,rhinoplasty_rib_cartilage
+                                      ₩ 7,500,000 (750 주고)
+r07  published    c_orda_ps       0.50   epicanthoplasty,ptosis_correction
+                                      ₩ 4,200,000 (총 420)
+r08  published    c_haneul_derm   0.50   ulthera
+                                      ₩ 890,000 (89만원)
+r09  quarantined  c_haneul_ps     0.50   breast_augmentation
+                                      ! SAFETY: possible ghost surgery report -> editorial escalation
+r10  published    c_mir_ps        0.85   facial_contouring_3_combo,zygoma_reduction,mandibular_angle_reduction,genioplasty
+                                      ₩ 12,000,000 (12,000,000원)
+r11  published    c_haneul_derm   0.50   thermage
+                                      ₩ 1,900,000 (190만원)
