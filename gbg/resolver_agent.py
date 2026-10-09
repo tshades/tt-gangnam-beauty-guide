@@ -84,29 +84,40 @@ class ResolverAgent:
                 trace.append(f"agent: stopped without submitting ({resp.stop_reason})")
                 break
             messages.append({"role": "assistant", "content": resp.content})
-            results, final = [], None
+            # Only ids the model has actually SEEN in earlier turns can be submitted;
+            # lookups in the same response as the submit don't count.
+            seen_before = set(seen)
+            results, submits = [], []
             for b in resp.content:
                 if b.type != "tool_use":
                     continue
                 if b.name == "submit_resolution":
-                    final = b.input
+                    submits.append(b.input)
                     results.append({"type": "tool_result", "tool_use_id": b.id, "content": "received"})
                 else:
                     out = self._exec(b.name, b.input, seen)
                     trace.append(f"agent.{b.name}({json.dumps(b.input, ensure_ascii=False)})")
                     results.append({"type": "tool_result", "tool_use_id": b.id, "content": out})
             messages.append({"role": "user", "content": results})
-            if final is not None:
-                return self._accept(final, seen, prior, trace), trace
+            if len(submits) > 1:
+                trace.append(f"agent: {len(submits)} conflicting submissions -> abstain")
+                return prior, trace
+            if submits:
+                return self._accept(submits[0], seen_before, prior, trace, raw.clinic_name_raw), trace
         trace.append(f"agent: no resolution within {MAX_STEPS} steps -> abstain")
         return prior, trace
 
-    def _accept(self, final: dict, seen: set[str], prior: ClinicMatch, trace: list[str]) -> ClinicMatch:
-        cid, ev, conf = final.get("clinic_id"), final.get("evidence", []), float(final.get("confidence", 0))
+    def _accept(self, final: dict, seen: set[str], prior: ClinicMatch, trace: list[str],
+                raw_name: str | None = None) -> ClinicMatch:
+        cid, conf = final.get("clinic_id"), float(final.get("confidence", 0))
+        ev = list(dict.fromkeys(e.strip() for e in final.get("evidence", []) if e and e.strip()))
         trace.append(f"agent.submit -> {cid} conf={conf:.2f} evidence={ev}")
+        name_spec = parse_name(raw_name)[1] if raw_name else None
+        cid_spec = parse_name(self.reg.by_id[cid]["name_ko"])[1] if raw_name and cid in seen else None
         reject = (None if cid is None else
-                  "clinic_id never returned by a tool" if cid not in seen else
-                  "fewer than 2 evidence items" if len(ev) < 2 else
+                  "clinic_id not returned by a tool in an earlier turn" if cid not in seen else
+                  "fewer than 2 distinct non-empty evidence items" if len(ev) < 2 else
+                  "specialty in written name contradicts clinic" if name_spec and cid_spec and name_spec != cid_spec else
                   f"confidence {conf:.2f} < {MIN_CONFIDENCE}" if conf < MIN_CONFIDENCE else None)
         if cid is None or reject:
             trace.append(f"agent: abstain ({reject or 'agent chose to abstain'})")

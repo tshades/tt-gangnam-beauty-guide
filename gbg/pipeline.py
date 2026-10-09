@@ -88,7 +88,7 @@ def run(reviews: list[RawReview], registry: Registry, offline: bool = False, wor
         p.issues += validate(p.raw, p.extraction)
         p.trust_score, p.trust_reasons, flags = score(p.raw, p.extraction, p.clinic, roster(p), p.template_cluster)
         p.issues += flags
-        blocking = [i for i in p.issues if not i.startswith("surgeon ")]
+        blocking = [i for i in p.issues if not i.endswith("not on clinic roster")]
         if blocking:
             p.status = Status.quarantined
         p.trace.append(f"route: {p.status.value} trust={p.trust_score}")

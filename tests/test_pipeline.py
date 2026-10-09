@@ -84,3 +84,37 @@ def test_agent_answer_gate_rejects_invented_or_thin_answers():
     assert agent._accept({"clinic_id": "a", "evidence": ev2, "confidence": 0.5}, {"a"}, prior, []).clinic_id is None
     m = agent._accept({"clinic_id": "a", "evidence": ev2, "confidence": 0.9}, {"a"}, prior, [])
     assert m.clinic_id == "a" and m.method == "agent"
+
+
+def test_agent_gate_rejects_blank_evidence_and_specialty_conflict():
+    from gbg.models import ClinicMatch
+    from gbg.resolver_agent import ResolverAgent
+    agent = object.__new__(ResolverAgent)
+    agent.reg = Registry(FX / "clinics.json")
+    prior = ClinicMatch(clinic_id=None, method="abstain", score=1.0)
+    seen = {"c_haneul_ps", "c_haneul_derm"}
+    assert agent._accept({"clinic_id": "c_haneul_derm", "evidence": ["", " "], "confidence": 0.9}, seen, prior, []).clinic_id is None
+    assert agent._accept({"clinic_id": "c_haneul_ps", "evidence": ["a", "b"], "confidence": 0.9}, seen, prior, [], "하늘피부과").clinic_id is None
+
+
+def test_phone_cannot_override_explicit_specialty():
+    assert Registry(FX / "clinics.json").resolve("하늘피부과", "02-555-0101").clinic_id is None
+
+
+def test_price_parsing_boundaries():
+    from gbg.extract import _prices
+    assert [p.amount_krw for p in _prices("가격은 89.5만원이었어요")] == [895_000]
+    assert [p.amount_krw for p in _prices("코수 12000 주고 했어요")] == []
+
+
+def test_hallucinated_surgeon_blocks_publish():
+    raw = load_reviews(FX / "reviews.jsonl")[0]
+    from gbg.pipeline import run as _run
+    import gbg.pipeline as pl
+    orig = pl.extract_offline
+    pl.extract_offline = lambda r, roster: orig(r, roster).model_copy(update={"surgeon_name_ko": "없는의사"})
+    try:
+        p = _run([raw], Registry(FX / "clinics.json"), offline=True)[0]
+    finally:
+        pl.extract_offline = orig
+    assert p.status == "quarantined"

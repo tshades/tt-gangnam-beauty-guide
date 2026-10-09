@@ -68,7 +68,11 @@ def _cache_key(r: RawReview) -> str:
     # Key on everything that changes the output: model, prompt, glossary, schema.
     # (Bug fixed in-window: keying on model+text alone served stale extractions after a schema change.)
     version = SYSTEM + _glossary_text() + json.dumps(Extraction.model_json_schema(), sort_keys=True)
-    return hashlib.sha256(f"{MODEL}|{version}|{r.text_ko}".encode()).hexdigest()[:16]
+    return hashlib.sha256(f"{MODEL}|{EFFORT}|{version}|{_user_msg(r)}".encode()).hexdigest()[:16]
+
+
+def _user_msg(r: RawReview) -> str:
+    return f"Clinic (as written): {r.clinic_name_raw}\n\nReview:\n{r.text_ko}"
 
 
 def extract_llm(r: RawReview) -> Extraction:
@@ -85,7 +89,7 @@ def extract_llm(r: RawReview) -> Extraction:
         max_tokens=4000,
         system=[{"type": "text", "text": SYSTEM.format(glossary=_glossary_text()),
                  "cache_control": {"type": "ephemeral"}}],  # glossary prefix is shared by every review
-        messages=[{"role": "user", "content": f"Clinic (as written): {r.clinic_name_raw}\n\nReview:\n{r.text_ko}"}],
+        messages=[{"role": "user", "content": _user_msg(r)}],
         output_format=Extraction,
         output_config={"effort": EFFORT},
     )
@@ -96,22 +100,27 @@ def extract_llm(r: RawReview) -> Extraction:
 
 
 # ---- offline fallback: deterministic, glossary + regex. Also the baseline to eval the LLM against.
-_MANWON = re.compile(r"(\d[\d,]*)\s*만\s*원")
-_WON = re.compile(r"(\d{1,3}(?:,\d{3})+|\d{5,})\s*원")
-_BARE = re.compile(r"(?:견적은?|가격은?|총|비용)\s*(\d{2,4})(?!\d|,|\s*원|\s*만|샷)|(\d{2,4})\s*(?:주고|들었|나왔)")
+_MANWON = re.compile(r"(?<![\d.,])(\d[\d,]*(?:\.\d+)?)\s*만\s*원")
+_WON = re.compile(r"(?<![\d.,])(\d{1,3}(?:,\d{3})+|\d{5,})\s*원")
+_BARE = re.compile(r"(?:견적은?|가격은?|총|비용)\s*(?<![\d.,])(\d{2,4})(?![\d.,]|\s*원|\s*만|샷)|(?<![\d.,])(\d{2,4})(?![\d.,])\s*(?:주고|들었|나왔)")
 _DPLUS = re.compile(r"D\+(\d+)")
 
 
 def _prices(text: str) -> list[Price]:
-    out = []
+    out, used = [], []
+    def free(m):  # each character of the text may feed at most one price
+        return all(m.end() <= a or m.start() >= b for a, b in used)
     for m in _MANWON.finditer(text):
-        out.append(Price(amount_krw=int(m.group(1).replace(",", "")) * 10_000, source_span=m.group(0)))
+        used.append(m.span())
+        out.append(Price(amount_krw=round(float(m.group(1).replace(",", "")) * 10_000), source_span=m.group(0)))
     for m in _WON.finditer(text):
-        if "만" not in text[max(0, m.start() - 2) : m.start()]:
+        if free(m):
+            used.append(m.span())
             out.append(Price(amount_krw=int(m.group(1).replace(",", "")), source_span=m.group(0)))
     for m in _BARE.finditer(text):
-        n = m.group(1) or m.group(2)
-        out.append(Price(amount_krw=int(n) * 10_000, source_span=m.group(0)))  # "180" => 180만원
+        if free(m):
+            n = m.group(1) or m.group(2)
+            out.append(Price(amount_krw=int(n) * 10_000, source_span=m.group(0)))  # "180" => 180만원
     return out
 
 

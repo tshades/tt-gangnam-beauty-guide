@@ -62,6 +62,10 @@ class Registry:
         if p:
             hits = [c["clinic_id"] for c in self.clinics if norm_phone(c["phone"]) == p]
             if len(hits) == 1:
+                name_spec = parse_name(raw_name)[1]
+                hit_spec = parse_name(self.by_id[hits[0]]["name_ko"])[1]
+                if name_spec and hit_spec and name_spec != hit_spec:
+                    return ClinicMatch(clinic_id=None, method="abstain", score=0.0, candidates=hits)
                 return ClinicMatch(clinic_id=hits[0], method="phone", score=1.0)
 
         core, spec = parse_name(raw_name)
