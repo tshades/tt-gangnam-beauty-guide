@@ -69,7 +69,7 @@ def run(reviews: list[RawReview], registry: Registry, offline: bool = False, wor
         index: dict[str, list[dict]] = {}
         for p in live:
             if p.clinic and p.clinic.clinic_id:
-                index.setdefault(p.raw.author, []).append(
+                index.setdefault(f"{p.raw.source}:{p.raw.author}", []).append(
                     {"review_id": p.raw.id, "clinic_id": p.clinic.clinic_id, "via": p.clinic.method,
                      "posted_at": p.raw.posted_at, "text_ko": p.raw.text_ko})
         agent = ResolverAgent(registry, index)
@@ -88,8 +88,7 @@ def run(reviews: list[RawReview], registry: Registry, offline: bool = False, wor
         p.issues += validate(p.raw, p.extraction)
         p.trust_score, p.trust_reasons, flags = score(p.raw, p.extraction, p.clinic, roster(p), p.template_cluster)
         p.issues += flags
-        blocking = [i for i in p.issues if not i.endswith("not on clinic roster")]
-        if blocking:
+        if p.issues:  # every issue blocks; non-blocking notes live in trust_reasons
             p.status = Status.quarantined
         p.trace.append(f"route: {p.status.value} trust={p.trust_score}")
 

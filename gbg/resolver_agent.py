@@ -66,12 +66,14 @@ class ResolverAgent:
                 seen.add(c["clinic_id"])
             return json.dumps(c or {"error": "not found"}, ensure_ascii=False)
         if name == "reviews_by_author":
-            return json.dumps(self.authors.get(args["author"], []), ensure_ascii=False)
+            # Handles aren't identities across platforms: only the current review's (source, author).
+            return json.dumps(self.authors.get(self._identity, []), ensure_ascii=False)
         return json.dumps({"error": f"unknown tool {name}"})
 
     def resolve(self, raw: RawReview, ex: Extraction | None, prior: ClinicMatch) -> tuple[ClinicMatch, list[str]]:
         trace: list[str] = []
         seen: set[str] = set()
+        self._identity = f"{raw.source}:{raw.author}"
         user = (f"Clinic as written: {raw.clinic_name_raw}\nPhone: {raw.clinic_phone}\nAuthor: {raw.author} ({raw.source})\n"
                 f"Procedures extracted: {ex.procedures if ex else 'unknown'}\n"
                 f"Deterministic matcher abstained; candidates: {prior.candidates}\n\n<review>\n{raw.text_ko}\n</review>")

@@ -396,16 +396,16 @@
     "clinic": {
       "clinic_id": "c_haneul_derm",
       "method": "agent",
-      "score": 0.9,
+      "score": 0.88,
       "candidates": [
         "c_haneul_ps",
         "c_haneul_derm"
       ],
       "evidence": [
         "Registry search for '하늘' returns only two clinics: c_haneul_ps and c_haneul_derm",
-        "c_haneul_derm (하늘피부과의원) lists ulthera among its services; c_haneul_ps does not offer ulthera (surgical services only)",
-        "Written name '하늘의원' matches the '의원' suffix of 하늘피부과의원; the PS clinic's name and aliases are 성형외과/성형 forms",
-        "Author momo_k's prior review r11 was resolved via phone to c_haneul_derm and says they planned to get 울쎄라 there next"
+        "c_haneul_derm (하늘피부과의원) lists ulthera among its services; c_haneul_ps lists only surgical services (eyelid, rhinoplasty, breast, contouring), no ulthera",
+        "Author momo_k's prior review r11 (phone-resolved) is attached to c_haneul_derm and says they plan to get Ulthera there next",
+        "Written name '하늘의원' is closer to '하늘피부과의원' than to '청담하늘성형외과'"
       ]
     },
     "extraction": {
@@ -440,7 +440,7 @@
       "agent.get_clinic({\"clinic_id\": \"c_haneul_derm\"})",
       "agent.reviews_by_author({\"author\": \"momo_k\"})",
       "agent.search_registry({\"query\": \"하늘\"})",
-      "agent.submit -> c_haneul_derm conf=0.90 evidence=[\"Registry search for '하늘' returns only two clinics: c_haneul_ps and c_haneul_derm\", 'c_haneul_derm (하늘피부과의원) lists ulthera among its services; c_haneul_ps does not offer ulthera (surgical services only)', \"Written name '하늘의원' matches the '의원' suffix of 하늘피부과의원; the PS clinic's name and aliases are 성형외과/성형 forms\", \"Author momo_k's prior review r11 was resolved via phone to c_haneul_derm and says they planned to get 울쎄라 there next\"]",
+      "agent.submit -> c_haneul_derm conf=0.88 evidence=[\"Registry search for '하늘' returns only two clinics: c_haneul_ps and c_haneul_derm\", 'c_haneul_derm (하늘피부과의원) lists ulthera among its services; c_haneul_ps lists only surgical services (eyelid, rhinoplasty, breast, contouring), no ulthera', \"Author momo_k's prior review r11 (phone-resolved) is attached to c_haneul_derm and says they plan to get Ulthera there next\", \"Written name '하늘의원' is closer to '하늘피부과의원' than to '청담하늘성형외과'\"]",
       "route: published trust=0.5"
     ]
   },

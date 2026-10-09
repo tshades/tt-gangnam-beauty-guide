@@ -30,7 +30,7 @@ def score(raw: RawReview, ex: Extraction, clinic: ClinicMatch | None, roster: li
         if ex.surgeon_name_ko in roster:
             s += 0.10; why.append(f"+0.10 named surgeon {ex.surgeon_name_ko} is on clinic's specialist roster (verified surgeon)")
         else:
-            flags.append(f"surgeon {ex.surgeon_name_ko} not on clinic roster")
+            why.append(f"+0.00 named surgeon {ex.surgeon_name_ko} not on clinic roster (no verified-surgeon credit)")
 
     if any(t in raw.text_ko for t in SAFETY_TERMS):
         flags.append("SAFETY: possible ghost surgery report -> editorial escalation")

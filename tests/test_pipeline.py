@@ -118,3 +118,11 @@ def test_hallucinated_surgeon_blocks_publish():
     finally:
         pl.extract_offline = orig
     assert p.status == "quarantined"
+
+
+def test_price_must_match_its_own_span():
+    raw = RawReview(id="x", source="other", url="u", author="a", posted_at="2026-01-01",
+                    clinic_name_raw="미르", text_ko="코수 350만원 주고 했어요")
+    ex = Extraction(text_en="...", procedures=["rhinoplasty"], sentiment="positive", confidence=0.9,
+                    prices=[Price(amount_krw=350_000, source_span="350만원")])
+    assert any("contradicts" in i for i in validate(raw, ex))
